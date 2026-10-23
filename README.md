@@ -1,24 +1,46 @@
-# ademjlassi.dev — portfolio
+# Adem Jlassi — portfolio
 
-Personal portfolio of **Adem Jlassi** — Big Data & Data Analytics student (ISAMM Tunis),
-built to sit alongside [the CV](Adem-Jlassi-CV.pdf) and [the GitHub profile](https://github.com/Adem-jlassi).
+[![Live site](https://img.shields.io/badge/LIVE-adem--jlassi.github.io-121513)](https://adem-jlassi.github.io)
+[![No build step](https://img.shields.io/badge/build-none-121513)](#run-it-locally)
 
-Plain HTML, CSS and 4 KB of JavaScript. No framework, no build step, no trackers.
+![The portfolio, as it looks live](assets/preview.png)
+
+Source of **[adem-jlassi.github.io](https://adem-jlassi.github.io)** — the personal
+portfolio of **Adem Jlassi**, Big Data & Data Analytics student at ISAMM Tunis. Built to
+sit alongside [the CV](https://adem-jlassi.github.io/Adem-Jlassi-CV.pdf) and the
+[GitHub profile README](https://github.com/Adem-jlassi).
+
+Plain HTML, CSS and ~4 KB of JavaScript. No framework, no build step, no trackers.
+
+## What's on it
+
+| Section | Contents |
+|:--|:--|
+| **Hero** | Who I am, what I'm looking for (a PFE internship), portrait, live Tunis clock |
+| **About** | Short first-person note, current activity, spoken languages |
+| **Selected work** | The Spark churn project featured with its metrics table, plus four more projects indexed like a contents page |
+| **Path** | Internship at Tunisie Telecom, education, activities |
+| **Toolkit** | Languages, big data, ML, environment — listed, not scored |
+| **Contact** | Mail link, LinkedIn, GitHub, downloadable CV |
+
+## Structure
 
 ```
 .
 ├── index.html            # the whole page
-├── styles.css            # design system + responsive rules
+├── styles.css            # design system, responsive rules, print styles
 ├── script.js             # clock, nav, scroll reveal, copy e-mail
-├── assets/portrait.jpg   # profile photo (synced from GitHub, Oct 2026)
+├── assets/
+│   ├── portrait.jpg      # profile photo (synced from GitHub, Oct 2026)
+│   └── preview.png       # the screenshot above
 ├── Adem-Jlassi-CV.pdf    # downloadable CV
 ├── .nojekyll             # tell GitHub Pages not to run Jekyll
 └── README.md             # this file
 ```
 
-## Preview locally
+## Run it locally
 
-Double-click `index.html`, or run a tiny server:
+Double-click `index.html`, or serve the folder:
 
 ```bash
 npx serve .
@@ -26,16 +48,10 @@ npx serve .
 python -m http.server 8000
 ```
 
-## Live site
+## Updating
 
-Hosted on GitHub Pages, built straight from the `main` branch — no build step,
-no Actions workflow:
-
-**https://adem-jlassi.github.io**
-
-## Updating it
-
-Edit the files, then push:
+Edit the files, then push — Pages rebuilds and the new version is live in about
+30 seconds:
 
 ```bash
 git add -A
@@ -43,29 +59,27 @@ git commit -m "Describe the change"
 git push
 ```
 
-Pages rebuilds and the new version goes live in about 30 seconds. The setting
-lives under **Settings → Pages → Build and deployment → Source: Deploy from a
-branch → `main` / root**.
+The Pages setting lives under **Settings → Pages → Build and deployment →
+Source: Deploy from a branch → `main` / root**.
 
-## Editing content
+## Changing the content
 
-Everything readable lives in `index.html`. Numbers, links and stack tags are plain
-markup — search for the text you want to change. Colours are CSS variables at the
-top of `styles.css` (`--acid` is the accent, `--bg` the background).
-
-## Re-syncing the profile photo
+Everything readable is in `index.html`; the numbers, links and stack tags are
+plain markup. Colours are CSS variables at the top of `styles.css` (`--acid` is
+the accent, `--bg` the background). `script.js` has no dependencies.
 
 `assets/portrait.jpg` is a local copy of the GitHub avatar, so the site never
-depends on GitHub's CDN. If you change your photo on GitHub, refresh it:
+depends on GitHub's CDN. To refresh it after changing your GitHub photo:
 
 ```powershell
 Invoke-WebRequest "https://avatars.githubusercontent.com/u/189667074?s=800&v=4" -OutFile assets\portrait.jpg
 ```
 
-Keep it square (1:1) — the frame crops to a square. 460 px is the largest GitHub
-will serve; a sharper photo dropped in manually also works.
+Keep it square — the frame crops to 1:1. `assets/preview.png` is a screenshot of
+the live site; re-take it whenever the design changes.
 
 ## Colophon
 
-Typeface: IBM Plex Sans + IBM Plex Mono. Palette: near-black, hairline greys,
-one acid-lime signal. Designed and hand-built by Adem Jlassi, October 2026.
+Typeface: IBM Plex Sans + IBM Plex Mono. Palette: near-black, hairline greys, one
+acid-lime signal. Lighthouse: accessibility 100, best practices 100, SEO 100.
+Designed and hand-built by Adem Jlassi, October 2026.
