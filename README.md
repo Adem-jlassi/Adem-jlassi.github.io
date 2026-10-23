@@ -32,7 +32,8 @@ Plain HTML, CSS and ~4 KB of JavaScript. No framework, no build step, no tracker
 ├── script.js             # clock, nav, scroll reveal, copy e-mail
 ├── assets/
 │   ├── portrait.jpg      # profile photo (synced from GitHub, Oct 2026)
-│   └── preview.png       # the screenshot above
+│   ├── preview.png       # the screenshot above
+│   └── og.png            # 1200×630 card used for link previews (og:image)
 ├── Adem-Jlassi-CV.pdf    # downloadable CV
 ├── .nojekyll             # tell GitHub Pages not to run Jekyll
 └── README.md             # this file
